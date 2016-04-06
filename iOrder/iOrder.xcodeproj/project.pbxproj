@@ -12,7 +12,6 @@
 		CA35650D1CB2B4FE00691E7B /* YWJBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA35650C1CB2B4FE00691E7B /* YWJBadgeView.m */; settings = {ASSET_TAGS = (); }; };
 		CA577D6F1CB0B31D003BDA03 /* YWJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA577D6E1CB0B31D003BDA03 /* YWJTabBar.m */; settings = {ASSET_TAGS = (); }; };
 		CAC344271CA513B500F4525B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC344261CA513B500F4525B /* Assets.xcassets */; };
-		CAC3442A1CA513B500F4525B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC344281CA513B500F4525B /* LaunchScreen.storyboard */; };
 		CAC344351CA513B500F4525B /* iOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC344341CA513B500F4525B /* iOrderTests.m */; };
 		CAC344401CA513B500F4525B /* iOrderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC3443F1CA513B500F4525B /* iOrderUITests.m */; };
 		CADAC7A51CAB75A6009D5FCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CADAC79F1CAB75A6009D5FCD /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -53,7 +52,6 @@
 		CA577D711CB0BC6E003BDA03 /* YWJIOrder.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWJIOrder.pch; sourceTree = "<group>"; };
 		CAC344171CA513B500F4525B /* iOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC344261CA513B500F4525B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAC344291CA513B500F4525B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAC3442B1CA513B500F4525B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAC344301CA513B500F4525B /* iOrderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOrderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC344341CA513B500F4525B /* iOrderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOrderTests.m; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 			children = (
 				CADAC7901CAB75A6009D5FCD /* Classes */,
 				CAC344261CA513B500F4525B /* Assets.xcassets */,
-				CAC344281CA513B500F4525B /* LaunchScreen.storyboard */,
 				CAC3441A1CA513B500F4525B /* Supporting Files */,
 			);
 			path = iOrder;
@@ -435,7 +432,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC3442A1CA513B500F4525B /* LaunchScreen.storyboard in Resources */,
 				CAC344271CA513B500F4525B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,17 +501,6 @@
 			targetProxy = CAC3443C1CA513B500F4525B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CAC344281CA513B500F4525B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAC344291CA513B500F4525B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CAC344421CA513B500F4525B /* Debug */ = {
