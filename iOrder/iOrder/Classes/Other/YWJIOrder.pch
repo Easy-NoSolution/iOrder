@@ -1,0 +1,30 @@
+//
+//  YWJIOrder.pch
+//  iOrder
+//
+//  Created by 易无解 on 4/3/16.
+//  Copyright © 2016 易无解. All rights reserved.
+//
+
+#ifndef YWJIOrder_pch
+#define YWJIOrder_pch
+
+#ifdef __OBJC__
+
+#import "UIView+YWJFrame.h"
+
+#define YWJKeyWindow [UIApplication sharedApplication].keyWindow
+
+#ifdef DEBUG // 调试
+
+#define YWJLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define NSLog(...)
+
+#endif
+
+#endif
+
+#endif /* YWJIOrder_pch */
