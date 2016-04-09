@@ -7,21 +7,33 @@
 //
 
 #import "AppDelegate.h"
-#import "YWJTabBarController.h"
+#import "IOTabBarController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, assign) UIBackgroundTaskIdentifier taskId;
 
 @end
 
 @implementation AppDelegate
 
+#pragma mark - self
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+//    创建管理者
+    self.beaconManager = [[ABBeaconManager alloc] init];
+//    设置beacon的代理
+    self.beaconManager.delegate = self;
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+//        注册通知
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
-
-    self.window.rootViewController = [[YWJTabBarController alloc] init];
+    
+    self.window.rootViewController = [[IOTabBarController alloc] init];
     
     return YES;
 }
@@ -30,10 +42,14 @@
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
-
+//    进入后台
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    self.taskId = [application beginBackgroundTaskWithExpirationHandler:^{
+//        后台结束时调用
+        [application endBackgroundTask:self.taskId];
+        self.taskId = UIBackgroundTaskInvalid;
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -46,6 +62,21 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - beacon manager delegate
+- (void)beaconManager:(ABBeaconManager *)manager didEnterRegion:(ABBeaconRegion *)region{
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = @"Enter monitoring region";
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+}
+
+- (void)beaconManager:(ABBeaconManager *)manager didExitRegion:(ABBeaconRegion *)region{
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = @"Exit monitoring region";
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 }
 
 @end

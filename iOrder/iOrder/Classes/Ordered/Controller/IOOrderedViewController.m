@@ -1,23 +1,21 @@
 //
-//  YWJOrderViewController.m
+//  IOOrderedViewController.m
 //  iOrder
 //
-//  Created by 易无解 on 3/30/16.
+//  Created by 易无解 on 4/9/16.
 //  Copyright © 2016 易无解. All rights reserved.
 //
 
-#import "YWJOrderViewController.h"
+#import "IOOrderedViewController.h"
 
-@interface YWJOrderViewController ()
+@interface IOOrderedViewController ()
 
 @end
 
-@implementation YWJOrderViewController
+@implementation IOOrderedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor redColor];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

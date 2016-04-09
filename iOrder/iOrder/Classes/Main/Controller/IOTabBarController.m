@@ -1,27 +1,27 @@
 //
-//  YWJTabBarController.m
+//  IOTabBarController.m
 //  iOrder
 //
-//  Created by 易无解 on 3/30/16.
+//  Created by 易无解 on 4/9/16.
 //  Copyright © 2016 易无解. All rights reserved.
 //
 
-#import "YWJTabBarController.h"
+#import "IOTabBarController.h"
 
-#import "YWJOrderViewController.h"
-#import "YWJOrderedViewController.h"
-#import "YWJProfileViewController.h"
-#import "YWJNavigationController.h"
+#import "IOOrderViewController.h"
+#import "IOOrderedViewController.h"
+#import "IOProfileViewController.h"
+#import "IONavigationController.h"
 
 #import "YWJTabBar.h"
 
-@interface YWJTabBarController ()<YWJTabBarDelegate>
+@interface IOTabBarController ()<YWJTabBarDelegate>
 
 @property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
-@implementation YWJTabBarController
+@implementation IOTabBarController
 
 - (NSMutableArray *)items{
     if (!_items) {
@@ -59,15 +59,15 @@
 //添加所有的子控制器
 - (void)setUpAllChildViewController{
     //点餐
-    YWJOrderViewController *order = [[YWJOrderViewController alloc] init];
+    IOOrderViewController *order = [[IOOrderViewController alloc] init];
     [self setUpOneChildViewController:order image:[UIImage imageNamed:@"1"] selectedImage:[UIImage imageNamed:@"1-"] title:@"点餐"];
     
     //已点菜单
-    YWJOrderedViewController *ordered = [[YWJOrderedViewController alloc] init];
+    IOOrderedViewController *ordered = [[IOOrderedViewController alloc] init];
     [self setUpOneChildViewController:ordered image:[UIImage imageNamed:@"2"] selectedImage:[UIImage imageNamed:@"2-"] title:@"已点菜单"];
     
     //我的
-    YWJProfileViewController *profile = [[YWJProfileViewController alloc] init];
+    IOProfileViewController *profile = [[IOProfileViewController alloc] init];
     [self setUpOneChildViewController:profile image:[UIImage imageNamed:@"3"] selectedImage:[UIImage imageNamed:@"3-"] title:@"我的"];
 }
 
@@ -80,7 +80,7 @@
     //保存tabBarItem到数组中，通过这个设置按钮的颜色等等
     [self.items addObject:vc.tabBarItem];
     
-    YWJNavigationController *nav = [[YWJNavigationController alloc] initWithRootViewController:vc];
+    IONavigationController *nav = [[IONavigationController alloc] initWithRootViewController:vc];
     [self addChildViewController:nav];
 }
 

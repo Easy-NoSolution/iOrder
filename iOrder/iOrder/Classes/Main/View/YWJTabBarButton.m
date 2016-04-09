@@ -10,7 +10,7 @@
 
 #import "YWJBadgeView.h"
 
-#define YWJImageRidio 0.7
+#define kYWJImageRidio 0.7
 
 @interface YWJTabBarButton ()
 
@@ -74,7 +74,7 @@
     
 //    1.imageView
     CGFloat imageW = self.width;
-    CGFloat imageH = self.height * YWJImageRidio;
+    CGFloat imageH = self.height * kYWJImageRidio;
     CGFloat imageX = 0;
     CGFloat imageY = 0;
     self.imageView.frame = CGRectMake(imageX, imageY, imageW, imageH);
