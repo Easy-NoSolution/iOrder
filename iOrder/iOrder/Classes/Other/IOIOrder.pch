@@ -16,7 +16,12 @@
 
 #import "UIView+YWJFrame.h"
 
+#define YWJUserDefaults [NSUserDefaults standardUserDefaults]
 #define YWJKeyWindow [UIApplication sharedApplication].keyWindow
+
+//------------ key ----------------
+#define kTransmitterKey @"transmitters"
+#define kHistoryUUIDKey @"historyUUIDs"
 
 #ifdef DEBUG // 调试
 

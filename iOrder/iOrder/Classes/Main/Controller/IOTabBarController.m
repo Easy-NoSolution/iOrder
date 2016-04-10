@@ -12,6 +12,7 @@
 #import "IOOrderViewController.h"
 #import "IOOrderedViewController.h"
 #import "IOProfileViewController.h"
+#import "IOIBeaconViewController.h"
 #import "IONavigationController.h"
 
 #import "RDVTabBarItem.h"
@@ -47,15 +48,19 @@
     UIViewController *profile = [[IOProfileViewController alloc] init];
     UIViewController *profileNav = [[IONavigationController alloc] initWithRootViewController:profile];
     
-    [self setViewControllers:@[orderNav, orderedNav, profileNav]];
+    //iBeacon
+    UIViewController *iBeacon = [[IOIBeaconViewController alloc] init];
+    UIViewController *iBeaconNav = [[IONavigationController alloc] initWithRootViewController:iBeacon];
+    
+    [self setViewControllers:@[orderNav, orderedNav, profileNav, iBeaconNav]];
     [self customizeTabBarForController:self];
 }
 
 - (void)customizeTabBarForController:(RDVTabBarController *)tabBarController{
     UIImage *finishiedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishiedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
-    NSArray *tabBarItemTitles = @[@"点餐", @"已点菜单", @"我的"];
+    NSArray *tabBarItemImages = @[@"first", @"second", @"third", @"four"];
+    NSArray *tabBarItemTitles = @[@"点餐", @"已点菜单", @"我的", @"iBeacon"];
     
     RDVTabBar *tabBar = [tabBarController tabBar];
     

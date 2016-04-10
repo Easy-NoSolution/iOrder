@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA798F301CBA501000A05CA8 /* IOIBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA798F2F1CBA501000A05CA8 /* IOIBeaconViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CA798F3A1CBA67EC00A05CA8 /* YWJTransmitterTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CA798F391CBA67EC00A05CA8 /* YWJTransmitterTool.m */; settings = {ASSET_TAGS = (); }; };
+		CA798F3D1CBA69D800A05CA8 /* YWJHistoryUUIDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CA798F3C1CBA69D800A05CA8 /* YWJHistoryUUIDTool.m */; settings = {ASSET_TAGS = (); }; };
+		CA798F401CBA720E00A05CA8 /* YWJTransmitters.m in Sources */ = {isa = PBXBuildFile; fileRef = CA798F3F1CBA720E00A05CA8 /* YWJTransmitters.m */; settings = {ASSET_TAGS = (); }; };
+		CA798F431CBA739000A05CA8 /* IONotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA798F421CBA739000A05CA8 /* IONotificationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CAE8F02C1CB940E2005618B0 /* iOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F02B1CB940E2005618B0 /* iOrderTests.m */; };
 		CAE8F0371CB940E2005618B0 /* iOrderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F0361CB940E2005618B0 /* iOrderUITests.m */; };
 		CAE8F07B1CB94170005618B0 /* YWJBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F04E1CB94170005618B0 /* YWJBadgeView.m */; settings = {ASSET_TAGS = (); }; };
@@ -46,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA798F2E1CBA501000A05CA8 /* IOIBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOIBeaconViewController.h; sourceTree = "<group>"; };
+		CA798F2F1CBA501000A05CA8 /* IOIBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOIBeaconViewController.m; sourceTree = "<group>"; };
+		CA798F381CBA67EC00A05CA8 /* YWJTransmitterTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWJTransmitterTool.h; sourceTree = "<group>"; };
+		CA798F391CBA67EC00A05CA8 /* YWJTransmitterTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWJTransmitterTool.m; sourceTree = "<group>"; };
+		CA798F3B1CBA69D800A05CA8 /* YWJHistoryUUIDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWJHistoryUUIDTool.h; sourceTree = "<group>"; };
+		CA798F3C1CBA69D800A05CA8 /* YWJHistoryUUIDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWJHistoryUUIDTool.m; sourceTree = "<group>"; };
+		CA798F3E1CBA720E00A05CA8 /* YWJTransmitters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWJTransmitters.h; sourceTree = "<group>"; };
+		CA798F3F1CBA720E00A05CA8 /* YWJTransmitters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWJTransmitters.m; sourceTree = "<group>"; };
+		CA798F411CBA739000A05CA8 /* IONotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IONotificationViewController.h; sourceTree = "<group>"; };
+		CA798F421CBA739000A05CA8 /* IONotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IONotificationViewController.m; sourceTree = "<group>"; };
 		CAE8F00E1CB940E2005618B0 /* iOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE8F0221CB940E2005618B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAE8F0271CB940E2005618B0 /* iOrderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOrderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +137,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA798F2A1CBA4FB600A05CA8 /* IBeaconSetting */ = {
+			isa = PBXGroup;
+			children = (
+				CA798F2B1CBA4FB600A05CA8 /* Controller */,
+				CA798F2C1CBA4FB600A05CA8 /* Model */,
+				CA798F2D1CBA4FB600A05CA8 /* View */,
+			);
+			path = IBeaconSetting;
+			sourceTree = "<group>";
+		};
+		CA798F2B1CBA4FB600A05CA8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA798F2E1CBA501000A05CA8 /* IOIBeaconViewController.h */,
+				CA798F2F1CBA501000A05CA8 /* IOIBeaconViewController.m */,
+				CA798F411CBA739000A05CA8 /* IONotificationViewController.h */,
+				CA798F421CBA739000A05CA8 /* IONotificationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CA798F2C1CBA4FB600A05CA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA798F3E1CBA720E00A05CA8 /* YWJTransmitters.h */,
+				CA798F3F1CBA720E00A05CA8 /* YWJTransmitters.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA798F2D1CBA4FB600A05CA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA798F341CBA66C300A05CA8 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				CA798F381CBA67EC00A05CA8 /* YWJTransmitterTool.h */,
+				CA798F391CBA67EC00A05CA8 /* YWJTransmitterTool.m */,
+				CA798F3B1CBA69D800A05CA8 /* YWJHistoryUUIDTool.h */,
+				CA798F3C1CBA69D800A05CA8 /* YWJHistoryUUIDTool.m */,
+			);
+			path = Preference;
+			sourceTree = "<group>";
+		};
 		CAE8F0051CB940E2005618B0 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +244,7 @@
 		CAE8F0441CB94170005618B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA798F2A1CBA4FB600A05CA8 /* IBeaconSetting */,
 				CAE8F0A21CB95C66005618B0 /* Tool */,
 				CAE8F0451CB94170005618B0 /* Main */,
 				CAE8F0531CB94170005618B0 /* Order */,
@@ -402,6 +466,7 @@
 		CAE8F0A21CB95C66005618B0 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				CA798F341CBA66C300A05CA8 /* Preference */,
 				CAE8F0A31CB95C66005618B0 /* Root */,
 			);
 			path = Tool;
@@ -547,16 +612,21 @@
 			files = (
 				CAE8F08C1CB9451F005618B0 /* IOOrderViewController.m in Sources */,
 				CAE8F0831CB94170005618B0 /* main.m in Sources */,
+				CA798F3A1CBA67EC00A05CA8 /* YWJTransmitterTool.m in Sources */,
 				CAE8F09F1CB94E21005618B0 /* RDVTabBar.m in Sources */,
+				CA798F3D1CBA69D800A05CA8 /* YWJHistoryUUIDTool.m in Sources */,
 				CAE8F0A61CB95CA2005618B0 /* YWJRootTool.m in Sources */,
 				CAE8F0811CB94170005618B0 /* UIView+YWJFrame.m in Sources */,
 				CAE8F0921CB9461C005618B0 /* IOProfileViewController.m in Sources */,
 				CAE8F08F1CB9459B005618B0 /* IOOrderedViewController.m in Sources */,
 				CAE8F07C1CB94170005618B0 /* YWJTabBar.m in Sources */,
 				CAE8F07B1CB94170005618B0 /* YWJBadgeView.m in Sources */,
+				CA798F431CBA739000A05CA8 /* IONotificationViewController.m in Sources */,
 				CAE8F0951CB946E8005618B0 /* IONavigationController.m in Sources */,
 				CAE8F07D1CB94170005618B0 /* YWJTabBarButton.m in Sources */,
+				CA798F401CBA720E00A05CA8 /* YWJTransmitters.m in Sources */,
 				CAE8F0801CB94170005618B0 /* AppDelegate.m in Sources */,
+				CA798F301CBA501000A05CA8 /* IOIBeaconViewController.m in Sources */,
 				CAE8F0A01CB94E21005618B0 /* RDVTabBarController.m in Sources */,
 				CAE8F0A11CB94E21005618B0 /* RDVTabBarItem.m in Sources */,
 				CAE8F0AF1CB9680B005618B0 /* IOTabBarController.m in Sources */,
