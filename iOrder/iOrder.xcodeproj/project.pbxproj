@@ -17,11 +17,15 @@
 		CAE8F0821CB94170005618B0 /* libAprilBeaconSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE8F0701CB94170005618B0 /* libAprilBeaconSDK.a */; settings = {ASSET_TAGS = (); }; };
 		CAE8F0831CB94170005618B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F0711CB94170005618B0 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		CAE8F0861CB9417F005618B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE8F0851CB9417F005618B0 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		CAE8F0891CB94418005618B0 /* IOTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F0881CB94418005618B0 /* IOTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 		CAE8F08C1CB9451F005618B0 /* IOOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F08B1CB9451F005618B0 /* IOOrderViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CAE8F08F1CB9459B005618B0 /* IOOrderedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F08E1CB9459B005618B0 /* IOOrderedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CAE8F0921CB9461C005618B0 /* IOProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F0911CB9461C005618B0 /* IOProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CAE8F0951CB946E8005618B0 /* IONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F0941CB946E8005618B0 /* IONavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		CAE8F09F1CB94E21005618B0 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F09A1CB94E21005618B0 /* RDVTabBar.m */; settings = {ASSET_TAGS = (); }; };
+		CAE8F0A01CB94E21005618B0 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F09C1CB94E21005618B0 /* RDVTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		CAE8F0A11CB94E21005618B0 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F09E1CB94E21005618B0 /* RDVTabBarItem.m */; settings = {ASSET_TAGS = (); }; };
+		CAE8F0A61CB95CA2005618B0 /* YWJRootTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F0A51CB95CA2005618B0 /* YWJRootTool.m */; settings = {ASSET_TAGS = (); }; };
+		CAE8F0AF1CB9680B005618B0 /* IOTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8F0AE1CB9680B005618B0 /* IOTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +75,6 @@
 		CAE8F0701CB94170005618B0 /* libAprilBeaconSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAprilBeaconSDK.a; sourceTree = "<group>"; };
 		CAE8F0711CB94170005618B0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CAE8F0851CB9417F005618B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAE8F0871CB94418005618B0 /* IOTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOTabBarController.h; sourceTree = "<group>"; };
-		CAE8F0881CB94418005618B0 /* IOTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOTabBarController.m; sourceTree = "<group>"; };
 		CAE8F08A1CB9451F005618B0 /* IOOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOOrderViewController.h; sourceTree = "<group>"; };
 		CAE8F08B1CB9451F005618B0 /* IOOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOOrderViewController.m; sourceTree = "<group>"; };
 		CAE8F08D1CB9459B005618B0 /* IOOrderedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOOrderedViewController.h; sourceTree = "<group>"; };
@@ -82,6 +84,16 @@
 		CAE8F0931CB946E8005618B0 /* IONavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IONavigationController.h; sourceTree = "<group>"; };
 		CAE8F0941CB946E8005618B0 /* IONavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IONavigationController.m; sourceTree = "<group>"; };
 		CAE8F0971CB947D7005618B0 /* IOIOrder.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOIOrder.pch; sourceTree = "<group>"; };
+		CAE8F0991CB94E21005618B0 /* RDVTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBar.h; sourceTree = "<group>"; };
+		CAE8F09A1CB94E21005618B0 /* RDVTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBar.m; sourceTree = "<group>"; };
+		CAE8F09B1CB94E21005618B0 /* RDVTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarController.h; sourceTree = "<group>"; };
+		CAE8F09C1CB94E21005618B0 /* RDVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarController.m; sourceTree = "<group>"; };
+		CAE8F09D1CB94E21005618B0 /* RDVTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVTabBarItem.h; sourceTree = "<group>"; };
+		CAE8F09E1CB94E21005618B0 /* RDVTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVTabBarItem.m; sourceTree = "<group>"; };
+		CAE8F0A41CB95CA2005618B0 /* YWJRootTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWJRootTool.h; sourceTree = "<group>"; };
+		CAE8F0A51CB95CA2005618B0 /* YWJRootTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWJRootTool.m; sourceTree = "<group>"; };
+		CAE8F0AD1CB9680B005618B0 /* IOTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOTabBarController.h; sourceTree = "<group>"; };
+		CAE8F0AE1CB9680B005618B0 /* IOTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +181,7 @@
 		CAE8F0441CB94170005618B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CAE8F0A21CB95C66005618B0 /* Tool */,
 				CAE8F0451CB94170005618B0 /* Main */,
 				CAE8F0531CB94170005618B0 /* Order */,
 				CAE8F0591CB94170005618B0 /* Ordered */,
@@ -191,10 +204,10 @@
 		CAE8F0461CB94170005618B0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CAE8F0871CB94418005618B0 /* IOTabBarController.h */,
-				CAE8F0881CB94418005618B0 /* IOTabBarController.m */,
 				CAE8F0931CB946E8005618B0 /* IONavigationController.h */,
 				CAE8F0941CB946E8005618B0 /* IONavigationController.m */,
+				CAE8F0AD1CB9680B005618B0 /* IOTabBarController.h */,
+				CAE8F0AE1CB9680B005618B0 /* IOTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +323,7 @@
 		CAE8F0651CB94170005618B0 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CAE8F0981CB94E21005618B0 /* RDVTabBarController */,
 				CAE8F0661CB94170005618B0 /* AprilSDK */,
 			);
 			path = Lib;
@@ -370,6 +384,36 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CAE8F0981CB94E21005618B0 /* RDVTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8F0991CB94E21005618B0 /* RDVTabBar.h */,
+				CAE8F09A1CB94E21005618B0 /* RDVTabBar.m */,
+				CAE8F09B1CB94E21005618B0 /* RDVTabBarController.h */,
+				CAE8F09C1CB94E21005618B0 /* RDVTabBarController.m */,
+				CAE8F09D1CB94E21005618B0 /* RDVTabBarItem.h */,
+				CAE8F09E1CB94E21005618B0 /* RDVTabBarItem.m */,
+			);
+			path = RDVTabBarController;
+			sourceTree = "<group>";
+		};
+		CAE8F0A21CB95C66005618B0 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8F0A31CB95C66005618B0 /* Root */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		CAE8F0A31CB95C66005618B0 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CAE8F0A41CB95CA2005618B0 /* YWJRootTool.h */,
+				CAE8F0A51CB95CA2005618B0 /* YWJRootTool.m */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +478,7 @@
 		CAE8F0061CB940E2005618B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YWJ;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "易无解";
 				TargetAttributes = {
@@ -502,15 +547,19 @@
 			files = (
 				CAE8F08C1CB9451F005618B0 /* IOOrderViewController.m in Sources */,
 				CAE8F0831CB94170005618B0 /* main.m in Sources */,
+				CAE8F09F1CB94E21005618B0 /* RDVTabBar.m in Sources */,
+				CAE8F0A61CB95CA2005618B0 /* YWJRootTool.m in Sources */,
 				CAE8F0811CB94170005618B0 /* UIView+YWJFrame.m in Sources */,
 				CAE8F0921CB9461C005618B0 /* IOProfileViewController.m in Sources */,
 				CAE8F08F1CB9459B005618B0 /* IOOrderedViewController.m in Sources */,
-				CAE8F0891CB94418005618B0 /* IOTabBarController.m in Sources */,
 				CAE8F07C1CB94170005618B0 /* YWJTabBar.m in Sources */,
 				CAE8F07B1CB94170005618B0 /* YWJBadgeView.m in Sources */,
 				CAE8F0951CB946E8005618B0 /* IONavigationController.m in Sources */,
 				CAE8F07D1CB94170005618B0 /* YWJTabBarButton.m in Sources */,
 				CAE8F0801CB94170005618B0 /* AppDelegate.m in Sources */,
+				CAE8F0A01CB94E21005618B0 /* RDVTabBarController.m in Sources */,
+				CAE8F0A11CB94E21005618B0 /* RDVTabBarItem.m in Sources */,
+				CAE8F0AF1CB9680B005618B0 /* IOTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

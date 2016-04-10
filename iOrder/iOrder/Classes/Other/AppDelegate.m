@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "IOTabBarController.h"
+
+#import "YWJRootTool.h"
 
 @interface AppDelegate ()
 
@@ -33,7 +34,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = [[IOTabBarController alloc] init];
+    [YWJRootTool chooseRootViewController:self.window];
     
     return YES;
 }

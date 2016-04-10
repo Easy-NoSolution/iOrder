@@ -2,99 +2,119 @@
 //  IOTabBarController.m
 //  iOrder
 //
-//  Created by 易无解 on 4/9/16.
+//  Created by 易无解 on 4/10/16.
 //  Copyright © 2016 易无解. All rights reserved.
 //
 
 #import "IOTabBarController.h"
 
+#import "RDVTabBarController.h"
 #import "IOOrderViewController.h"
 #import "IOOrderedViewController.h"
 #import "IOProfileViewController.h"
 #import "IONavigationController.h"
 
-#import "YWJTabBar.h"
+#import "RDVTabBarItem.h"
 
-@interface IOTabBarController ()<YWJTabBarDelegate>
-
-@property (nonatomic, strong) NSMutableArray *items;
+@interface IOTabBarController ()
 
 @end
 
 @implementation IOTabBarController
 
-- (NSMutableArray *)items{
-    if (!_items) {
-        _items = [NSMutableArray array];
+#pragma mark - self
+- (instancetype)init{
+    if (self = [super init]) {
+//        设置所有的子控制器
+        [self setupViewControllers];
+//        设置tabbar的富文本属性
+        [self setupTabBarTitleAttri];
+        [self customizeInterface];
     }
-    return _items;
+    return self;
 }
 
-#pragma mark - YWJTabBarController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    //添加所有的子控制器
-    [self setUpAllChildViewController];
-    
-    //更换系统TabBar里的内容
-    [self setUpTabBar];
-    
-}
-
-//更换系统TabBar里的内容
-- (void)setUpTabBar{
-    YWJTabBar *tabBar = [[YWJTabBar alloc] initWithFrame:self.tabBar.bounds];
-    tabBar.backgroundColor = [UIColor whiteColor];
-    
-    // 给自定义的tabBar传递tabBarItem模型
-    tabBar.items = self.items;
-    
-    tabBar.delegate = self;
-    [self.tabBar addSubview:tabBar];
-}
-
-//添加所有的子控制器
-- (void)setUpAllChildViewController{
+- (void)setupViewControllers{
     //点餐
-    IOOrderViewController *order = [[IOOrderViewController alloc] init];
-    [self setUpOneChildViewController:order image:[UIImage imageNamed:@"1"] selectedImage:[UIImage imageNamed:@"1-"] title:@"点餐"];
+    UIViewController *order = [[IOOrderViewController alloc] init];
+    UIViewController *orderNav = [[IONavigationController alloc] initWithRootViewController:order];
     
     //已点菜单
-    IOOrderedViewController *ordered = [[IOOrderedViewController alloc] init];
-    [self setUpOneChildViewController:ordered image:[UIImage imageNamed:@"2"] selectedImage:[UIImage imageNamed:@"2-"] title:@"已点菜单"];
+    UIViewController *ordered = [[IOOrderedViewController alloc] init];
+    UIViewController *orderedNav = [[IONavigationController alloc] initWithRootViewController:ordered];
     
     //我的
-    IOProfileViewController *profile = [[IOProfileViewController alloc] init];
-    [self setUpOneChildViewController:profile image:[UIImage imageNamed:@"3"] selectedImage:[UIImage imageNamed:@"3-"] title:@"我的"];
+    UIViewController *profile = [[IOProfileViewController alloc] init];
+    UIViewController *profileNav = [[IONavigationController alloc] initWithRootViewController:profile];
+    
+    [self setViewControllers:@[orderNav, orderedNav, profileNav]];
+    [self customizeTabBarForController:self];
 }
 
-//添加一个子控制器(用NavigationController包装)
-- (void)setUpOneChildViewController:(UIViewController *)vc image:(UIImage *)image selectedImage:(UIImage *)selectedImage title:(NSString *)title{
-    vc.title = title;
-    vc.tabBarItem.image = image;
-    vc.tabBarItem.selectedImage = selectedImage;
+- (void)customizeTabBarForController:(RDVTabBarController *)tabBarController{
+    UIImage *finishiedImage = [UIImage imageNamed:@"tabbar_selected_background"];
+    UIImage *unfinishiedImage = [UIImage imageNamed:@"tabbar_normal_background"];
+    NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
+    NSArray *tabBarItemTitles = @[@"点餐", @"已点菜单", @"我的"];
     
-    //保存tabBarItem到数组中，通过这个设置按钮的颜色等等
-    [self.items addObject:vc.tabBarItem];
+    RDVTabBar *tabBar = [tabBarController tabBar];
     
-    IONavigationController *nav = [[IONavigationController alloc] initWithRootViewController:vc];
-    [self addChildViewController:nav];
+    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), CGRectGetHeight(tabBar.frame))];
+    
+    NSUInteger index = 0;
+    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+        [item setBackgroundSelectedImage:finishiedImage withUnselectedImage:unfinishiedImage];
+        UIImage *selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected", [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal", [tabBarItemImages objectAtIndex:index]]];
+        
+        [item setTitle:[tabBarItemTitles objectAtIndex:index]];
+        
+        [item setFinishedSelectedImage:selectedImage withFinishedUnselectedImage:unselectedImage];
+        
+        index++;
+    }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupTabBarTitleAttri{
+    RDVTabBarItem *item = [RDVTabBarItem appearanceWhenContainedInInstancesOfClasses:@[[super class]]];
+    NSMutableDictionary *selTitleAttr = [NSMutableDictionary dictionary];
+    selTitleAttr[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    item.selectedTitleAttributes = selTitleAttr;
+    NSMutableDictionary *unselTitleAttr = [NSMutableDictionary dictionary];
+    unselTitleAttr[NSForegroundColorAttributeName] = [UIColor blackColor];
+    item.unselectedTitleAttributes = unselTitleAttr;
 }
 
-#pragma mark - tabBar delegate
-- (void)tabBar:(YWJTabBar *)tabBar didClickButton:(NSUInteger)index{
+- (void)customizeInterface{
+#warning comprehension later
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     
-    //切换控制器
-    self.selectedIndex = index;
+    UIImage *backgroundImage = nil;
+    NSDictionary *textAttributes = nil;
+    
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background_tall"];
+        
+        textAttributes = @{
+                           NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
+                           NSForegroundColorAttributeName: [UIColor blackColor],
+                           };
+    } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background"];
+        
+        textAttributes = @{
+                           UITextAttributeFont: [UIFont boldSystemFontOfSize:18],
+                           UITextAttributeTextColor: [UIColor blackColor],
+                           UITextAttributeTextShadowColor: [UIColor clearColor],
+                           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetZero],
+                           };
+#endif
+    }
+    
+    [navigationBarAppearance setBackgroundImage:backgroundImage
+                                  forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
 
 @end
